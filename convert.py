@@ -46,14 +46,16 @@ try:
         check = input(f'{file_name}.xlsx が既に存在します。\n上書きしてよろしいですか？(y/N) ... ')
         if check.lower() == 'n' or check.lower() == 'no' or check == '':
             sys.exit(1)
-except PermissionError:
-    print(f'{file_name}.xlsx が開かれているため上書きできません。Excelファイルを閉じるか、出力するファイル名を変更してください。')
-    sys.exit(1)
 except FileNotFoundError:
     pass
 
 wb = Workbook()
-wb.save(f'{file_name}.xlsx')
+
+try:
+    wb.save(f'{file_name}.xlsx')
+except PermissionError:
+    print(f'{file_name}.xlsx が開かれているため上書きできません。Excelファイルを閉じるか、出力するファイル名を変更してください。')
+    sys.exit(1)
 
 wb = load_workbook(f'{file_name}.xlsx')
 
