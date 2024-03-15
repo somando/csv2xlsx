@@ -202,6 +202,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 この場合はPythonのインストールは不要です。以下のコマンドを入力後、Enterを押しPythonを一度終了します。
 
+``` python
+exit()
+```
+
 #### Pythonがインストールされていない場合
 
 Microsoft Storeが自動起動するはずです。
