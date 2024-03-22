@@ -1,3 +1,8 @@
+altgraph==0.17.4
 chardet==5.2.0
 et-xmlfile==1.1.0
+macholib==1.16.3
 openpyxl==3.1.2
+packaging==24.0
+pyinstaller==6.5.0
+pyinstaller-hooks-contrib==2024.3
